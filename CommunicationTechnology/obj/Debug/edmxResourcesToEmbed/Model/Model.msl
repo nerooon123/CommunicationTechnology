@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище TARIFModelContainer" CdmEntityContainer="TARIFEntities">
+    <EntitySetMapping Name="Client">
+      <EntityTypeMapping TypeName="TARIFModel.Client">
+        <MappingFragment StoreEntitySet="Client">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="NumberPhone" ColumnName="NumberPhone" />
+          <ScalarProperty Name="IdTarif" ColumnName="IdTarif" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="PatronymicName" ColumnName="PatronymicName" />
+          <ScalarProperty Name="DateBirthday" ColumnName="DateBirthday" />
+          <ScalarProperty Name="PassportSerial" ColumnName="PassportSerial" />
+          <ScalarProperty Name="PassportNumber" ColumnName="PassportNumber" />
+          <ScalarProperty Name="DatePassport" ColumnName="DatePassport" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Services">
+      <EntityTypeMapping TypeName="TARIFModel.Services">
+        <MappingFragment StoreEntitySet="Services">
+          <ScalarProperty Name="CodeService" ColumnName="CodeService" />
+          <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
+          <ScalarProperty Name="SalaryService" ColumnName="SalaryService" />
+          <ScalarProperty Name="ConnectPrice" ColumnName="ConnectPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tarif">
+      <EntityTypeMapping TypeName="TARIFModel.Tarif">
+        <MappingFragment StoreEntitySet="Tarif">
+          <ScalarProperty Name="IdTarif" ColumnName="IdTarif" />
+          <ScalarProperty Name="TarifName" ColumnName="TarifName" />
+          <ScalarProperty Name="Internet" ColumnName="Internet" />
+          <ScalarProperty Name="CountMinutes" ColumnName="CountMinutes" />
+          <ScalarProperty Name="CountSMS" ColumnName="CountSMS" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsingService">
+      <EntityTypeMapping TypeName="TARIFModel.UsingService">
+        <MappingFragment StoreEntitySet="UsingService">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CodeService" ColumnName="CodeService" />
+          <ScalarProperty Name="DateConnection" ColumnName="DateConnection" />
+          <ScalarProperty Name="NumberPhone" ColumnName="NumberPhone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="Хранилище TARIFModel.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="Хранилище TARIFModel.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="Хранилище TARIFModel.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="Хранилище TARIFModel.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TARIFModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="Хранилище TARIFModel.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TARIFModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="Хранилище TARIFModel.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="Хранилище TARIFModel.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>
